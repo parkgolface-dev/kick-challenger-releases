@@ -1,8 +1,8 @@
 {
   "versionCode": 8,
   "versionName": "0.6.1",
-  "apkUrl": "https://parkgolface-dev.github.io/kick-challenger-releases/kick-challenger-latest.apk",
+  "apkUrl": "https://parkgolface-dev.github.io/kick-challenger-releases/kick-challenger-0.6.1.apk",
   "sha256": "de1b017e90af961e5339216ecb90eba4a4d03a47b478f56b1cfe1113be348c71",
   "notes": "0.6.1: 업데이트 알림(새 버전·설치 완료 알림 창), 업데이트 소식 화면과 홈 종 아이콘(읽지 않은 수), 메뉴에 업데이트 소식",
-  "publishedAt": "2026-11-03T16:12:36+09:00"
+  "publishedAt": "2026-11-03T17:26:17+09:00"
 }
