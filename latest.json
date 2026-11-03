@@ -1,8 +1,8 @@
 {
-  "versionCode": 4,
-  "versionName": "0.3.1-a0",
+  "versionCode": 5,
+  "versionName": "0.4.0-a0",
   "apkUrl": "https://parkgolface-dev.github.io/kick-challenger-releases/kick-challenger-latest.apk",
-  "sha256": "cb8c85aeee68f48c84e5077455698eb10885d8fe542dcc91eff5c3aab98acd95",
-  "notes": "0.3.1: 코드푸시(파크골프 서버 cp.parkgolface.com) 연결 — 이후 Dart 수정은 재설치 없이 패치, 홈에 패치 번호 표시",
-  "publishedAt": "2026-11-03T10:10:07+09:00"
+  "sha256": "a99b2d1741bb9a86e27f2454a25d3fa27cc1ae51aa746c330b981cd595e6d1df",
+  "notes": "0.4.0: 기획서 UI(참가 신청·대회·실시간 기록·측정 화면), 17개 언어팩(태권도 구령은 한국어), 랭킹 서버 연동",
+  "publishedAt": "2026-11-03T10:56:01+09:00"
 }
