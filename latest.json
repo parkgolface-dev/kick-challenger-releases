@@ -1,8 +1,8 @@
 {
-  "versionCode": 5,
-  "versionName": "0.4.0-a0",
+  "versionCode": 6,
+  "versionName": "0.5.0",
   "apkUrl": "https://parkgolface-dev.github.io/kick-challenger-releases/kick-challenger-latest.apk",
-  "sha256": "a99b2d1741bb9a86e27f2454a25d3fa27cc1ae51aa746c330b981cd595e6d1df",
-  "notes": "0.4.0: 기획서 UI(참가 신청·대회·실시간 기록·측정 화면), 17개 언어팩(태권도 구령은 한국어), 랭킹 서버 연동",
-  "publishedAt": "2026-11-03T10:56:01+09:00"
+  "sha256": "86f5da354178b48509ae14c80612aebf4962c2bc0e7aa6715c01cfaee9ce5e05",
+  "notes": "0.5.0: 도전 모드 7종(많이·높이·빠르게·연타·반응·기술·콤보), 영상 분석(품새 엔진 방식), 포즈 23점(발끝·뒤꿈치), 판정은 카메라 영상 분석 · 센서는 추후 업데이트",
+  "publishedAt": "2026-11-03T12:38:07+09:00"
 }
