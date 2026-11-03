@@ -1,7 +1,8 @@
 {
-  "versionCode": 1,
-  "versionName": "0.1.0-a0",
+  "versionCode": 2,
+  "versionName": "0.2.0-a0",
   "apkUrl": "https://parkgolface-dev.github.io/kick-challenger-releases/kick-challenger-latest.apk",
-  "sha256": "5b8d4332da0c378a5ce7ad15caf90baa3c29aa26b6a3a47d2f2f8fd3a9bc1971",
-  "publishedAt": "2026-11-03T00:15:04+09:00"
+  "sha256": "c1300956f3f3a57621f71209993135b8a252c306b121ff514245e16cd1d71362",
+  "notes": "Flutter 전환판: 판정 코어 Dart(kick_core), 화면 동일, 이동 보정·발별 바닥선",
+  "publishedAt": "2026-11-03T09:32:28+09:00"
 }
