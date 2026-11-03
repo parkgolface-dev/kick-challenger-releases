@@ -1,8 +1,8 @@
 {
-  "versionCode": 7,
-  "versionName": "0.6.0",
+  "versionCode": 8,
+  "versionName": "0.6.1",
   "apkUrl": "https://parkgolface-dev.github.io/kick-challenger-releases/kick-challenger-latest.apk",
-  "sha256": "93f298ef5c953f68cf721684e127ab6d0923213b0fe0c3b0b38ea8f59f0892ce",
-  "notes": "0.6.0: 앱 안 업데이트(새 버전 알림·내려받기·설치), 메뉴(언어·업데이트 확인·유연성 기록·설정), 훈련(리듬·인터벌), 유연성 기록, 일일 챌린지·연속 일수, 도장 대항전, 결과 카드 공유",
-  "publishedAt": "2026-11-03T13:15:32+09:00"
+  "sha256": "de1b017e90af961e5339216ecb90eba4a4d03a47b478f56b1cfe1113be348c71",
+  "notes": "0.6.1: 업데이트 알림(새 버전·설치 완료 알림 창), 업데이트 소식 화면과 홈 종 아이콘(읽지 않은 수), 메뉴에 업데이트 소식",
+  "publishedAt": "2026-11-03T16:12:36+09:00"
 }
