@@ -1,17 +1,47 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>킥챌린저 설치</title>
+<script>
+// 카카오톡·인스타그램 등 앱 안 브라우저는 APK를 받거나 설치 화면으로 넘기지 못한다 → 기본 브라우저로 넘긴다(운영자 2026-11-03).
+(function(){
+  var ua=navigator.userAgent||'', here=location.href;
+  if(/KAKAOTALK/i.test(ua)){ location.href='kakaotalk://web/openExternal?url='+encodeURIComponent(here); return; }
+  if(/Line\//i.test(ua) && here.indexOf('openExternalBrowser=1')<0){ location.href=here+(here.indexOf('?')<0?'?':'&')+'openExternalBrowser=1'; return; }
+  if(/Android/i.test(ua) && /(FBAN|FBAV|Instagram|NAVER|DaumApps|everytimeApp|; wv\))/i.test(ua)){
+    location.href='intent://'+here.replace(/^https?:\/\//,'')+'#Intent;scheme=https;package=com.android.chrome;end'; return;
+  }
+})();
+</script>
 <style>body{margin:0;font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;background:#14213d;color:#f4f4f2;display:flex;min-height:100vh;align-items:center;justify-content:center}
 main{max-width:420px;padding:32px 20px;text-align:center}h1{font-size:28px;margin:0 0 6px}p{color:#a9b3c6;line-height:1.5}
 a.btn{display:block;background:#fca311;color:#14213d;text-decoration:none;font-size:20px;font-weight:700;padding:18px;border-radius:16px;margin:24px 0 12px}
-small{color:#a9b3c6}ol{text-align:left;color:#a9b3c6;line-height:1.7;padding-left:20px}.file{color:#fca311;font-weight:700}</style></head><body><main>
+small{color:#a9b3c6}ol{text-align:left;color:#a9b3c6;line-height:1.7;padding-left:20px}.file{color:#fca311;font-weight:700}
+#inapp{display:none;background:#e5262e;color:#fff;border-radius:12px;padding:14px;margin:0 0 16px;text-align:left;font-size:14px;line-height:1.5}
+#inapp button{margin-top:8px;background:#fff;color:#14213d;border:0;border-radius:8px;padding:8px 12px;font-weight:700;font-size:14px}
+details{text-align:left;color:#a9b3c6;margin-top:18px;font-size:14px;line-height:1.6}summary{cursor:pointer;color:#f4f4f2;font-weight:700}</style></head><body><main>
 <!-- scripts/release.sh가 배포마다 이 파일을 올린다(원본: sources/kick/app/scripts/pages_index.html) -->
+<div id="inapp"><b>앱 안 브라우저에서는 설치가 되지 않습니다.</b><br>오른쪽 위 ⋮ 메뉴에서 「다른 브라우저로 열기」(크롬·삼성 인터넷)를 누르거나, 아래 버튼으로 주소를 복사해 브라우저에 붙여 넣으세요.<br><button id="copy">주소 복사</button></div>
 <h1>킥챌린저</h1><p>발차기 횟수·높이 측정 · Android</p>
 <a class="btn" id="dl" href="kick-challenger-latest.apk" download>APK 내려받기</a>
 <small id="v"></small>
 <p><small>내려받는 파일 이름에 버전이 붙습니다(예: <span class="file" id="fn">kick-challenger-0.6.1.apk</span>). 예전에 받은 파일과 헷갈리지 않게, 다운로드 폴더에서 <b>가장 높은 버전</b> 파일을 여세요.</small></p>
 <ol><li>내려받은 파일을 열고 <b>설치</b> — 이미 깔려 있으면 덮어쓰고 기록은 그대로 남습니다</li><li>"알 수 없는 앱 설치"를 허용하라고 하면 허용</li><li>"Play 프로텍트 · 앱 차단됨"이 뜨면 「확인」 대신 그 위의 <b>「무시하고 설치하기」</b>를 누릅니다(스토어 밖 앱에 뜨는 일반 경고입니다)</li><li>0.6.0부터는 앱 안에서 새 버전을 알려 주고 바로 설치합니다</li></ol>
+<details><summary>설치가 되지 않을 때</summary><ol>
+<li><b>카카오톡 등 앱 안에서 열었다면</b> — 크롬이나 삼성 인터넷에서 이 페이지를 다시 열어 내려받으세요(자동으로 넘어가지 않으면 ⋮ → 「다른 브라우저로 열기」).</li>
+<li><b>「이 출처의 앱 설치 허용」</b>을 묻는 화면이 나오면 켜고 뒤로 돌아와 다시 설치를 누르세요.</li>
+<li><b>「Play 프로텍트 · 앱 차단됨」</b>이 뜨면 「확인」 대신 그 위의 「무시하고 설치하기」를 누르세요.</li>
+<li><b>「앱이 설치되지 않았습니다」</b>가 뜨면 예전에 다른 경로로 받은 킥챌린저가 깔려 있는 경우입니다. 기존 앱을 지우고 다시 설치하세요(휴대폰 안 연습 기록은 사라지고, 대회 기록은 서버에 남습니다).</li>
+<li>내려받은 파일은 <b>파일 앱 → 다운로드</b>에서 가장 높은 버전 이름(예: kick-challenger-0.7.0.apk)을 누르면 됩니다.</li>
+</ol></details>
 <p><small>Android 10 이상 · arm64 기기 · 영상은 기기 밖으로 나가지 않습니다</small></p>
-<script>fetch('latest.json?'+Date.now()).then(r=>r.json()).then(j=>{
+<script>
+if(/(KAKAOTALK|FBAN|FBAV|Instagram|NAVER|DaumApps|Line\/|; wv\))/i.test(navigator.userAgent||'')){
+  document.getElementById('inapp').style.display='block';
+}
+document.getElementById('copy').addEventListener('click',function(){
+  var u=location.href.split('?')[0];
+  (navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(function(){this.textContent='복사했습니다';}.bind(this)).catch(function(){prompt('주소를 복사하세요',u);});
+});
+fetch('latest.json?'+Date.now()).then(r=>r.json()).then(j=>{
   var name='kick-challenger-'+j.versionName+'.apk', a=document.getElementById('dl');
   a.href=name+'?v='+j.versionCode; a.setAttribute('download',name); a.textContent='APK 내려받기 · '+j.versionName;
   document.getElementById('fn').textContent=name;
