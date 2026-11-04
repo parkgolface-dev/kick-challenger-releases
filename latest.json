@@ -1,8 +1,8 @@
 {
-  "versionCode": 10,
-  "versionName": "0.8.0",
-  "apkUrl": "https://parkgolface-dev.github.io/kick-challenger-releases/kick-challenger-0.8.0.apk",
-  "sha256": "4e1f783fce3614c5098eb6d6c39dd82a54a2ecb2f74bf486b6a33700c7bda5e9",
-  "notes": "0.8.0: CD-3 「청 대 홍」 디자인, 효과음(발차기 성공·콤보·새 기록)·구령 음성(준비·시작·그만), 새 기록 배너·다시 하기",
-  "publishedAt": "2026-11-04T05:35:50+09:00"
+  "versionCode": 11,
+  "versionName": "0.8.1",
+  "apkUrl": "https://parkgolface-dev.github.io/kick-challenger-releases/kick-challenger-0.8.1.apk",
+  "sha256": "b5ee563e097e722cff20ed06fd88f5a6a6866d7423637677c2c93e45b065eeb9",
+  "notes": "0.8.1: 측정 화면에 카메라 전환 버튼(전면↔후면, 측정 전에만·설정에 기억), 카메라 전환·정지 때 포즈 분석기 종료 순서를 고쳐 앱이 꺼지던 문제 수정",
+  "publishedAt": "2026-11-04T10:01:33+09:00"
 }
