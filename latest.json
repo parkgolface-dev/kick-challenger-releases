@@ -1,8 +1,8 @@
 {
-  "versionCode": 13,
-  "versionName": "0.10.0",
-  "apkUrl": "https://parkgolface-dev.github.io/kick-challenger-releases/kick-challenger-0.10.0.apk",
-  "sha256": "8f53bb931796b893cf6a6dc20980bd3bba740b548fab3806db7bd6d019778591",
-  "notes": "0.10.0: 피그마 CD-3 시안대로 화면 새 단장 — 홈(빛살 배경·Chung VS Hong 배틀·오늘 VS 내 최고·입체 시작 버튼·오늘의 미션 4칸·아래 탭), 측정(청·홍 점수판·별 폭발 VS·콤보 폭발·발 조준 틀·진행 고리 버튼), 결과(왕관·새 기록 띠·큰 점수·금메달·VS 최고·다시 하기·공유)",
-  "publishedAt": "2026-11-06T15:26:29+09:00"
+  "versionCode": 14,
+  "versionName": "0.11.0",
+  "apkUrl": "https://parkgolface-dev.github.io/kick-challenger-releases/kick-challenger-0.11.0.apk",
+  "sha256": "04ab05ca4f3969c7a79ed2e8e17cc153b77f34c42d5d48ab9ade4af84abfddb9",
+  "notes": "0.11.0: 측정 영상을 휴대폰 갤러리(Movies/KickChallenger)에 저장하고 내 기록과 연결(이전 영상도 옮김), 내 기록에 영상 그림·보기·올리기, 올리기 버튼(유튜브 앱·다른 앱), 영상 저장이 안 되는 기기는 측정 화면에 표시",
+  "publishedAt": "2026-11-07T14:09:51+09:00"
 }
