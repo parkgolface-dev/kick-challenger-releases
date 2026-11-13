@@ -1,8 +1,8 @@
 {
-  "versionCode": 14,
-  "versionName": "0.11.0",
-  "apkUrl": "https://parkgolface-dev.github.io/kick-challenger-releases/kick-challenger-0.11.0.apk",
-  "sha256": "04ab05ca4f3969c7a79ed2e8e17cc153b77f34c42d5d48ab9ade4af84abfddb9",
-  "notes": "0.11.0: 측정 영상을 휴대폰 갤러리(Movies/KickChallenger)에 저장하고 내 기록과 연결(이전 영상도 옮김), 내 기록에 영상 그림·보기·올리기, 올리기 버튼(유튜브 앱·다른 앱), 영상 저장이 안 되는 기기는 측정 화면에 표시",
-  "publishedAt": "2026-11-07T14:09:51+09:00"
+  "versionCode": 15,
+  "versionName": "0.12.0",
+  "apkUrl": "https://parkgolface-dev.github.io/kick-challenger-releases/kick-challenger-0.12.0.apk",
+  "sha256": "f305a9820c6e3ea6fc44c99e8904b902525823e2a4f578fcf475a11c6cafe838",
+  "notes": "앱이 꺼져 있어도 업데이트 소식이 나오면 휴대폰 알림, 센서 시험(개발판, 발등 센서 1~2개·시뮬레이션), 업데이트 소식 새 표시 버그 수정",
+  "publishedAt": "2026-11-13T15:53:38+09:00"
 }
