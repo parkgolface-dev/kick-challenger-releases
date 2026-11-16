@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>도장 대회 결과 · 킥챌린저</title>
+<style>
+  /* 킥챌린저 앱과 같은 남흑 바탕(DESIGN.md CD-3). 노랑은 메달(1~3위)에만. */
+  :root { --navy:#11131A; --card:#1B2130; --line:#232A3B; --paper:#F4F6FA; --mid:#9AA3B6; --yellow:#FFC93C; color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--navy); color:var(--paper); font: 16px/1.5 -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", Roboto, sans-serif; word-break: keep-all; }
+  main { max-width: 560px; margin: 0 auto; padding: 24px 16px 40px; }
+  .kicker { color: var(--mid); font-size: 14px; font-weight: 600; margin: 0; }
+  h1 { font-size: 28px; line-height: 1.25; margin: 4px 0 4px; text-wrap: balance; }
+  .meta { color: var(--mid); font-size: 15px; margin: 0 0 20px; }
+  ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  li { display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; }
+  li.medal { border-color: var(--yellow); }
+  .rank { font-size: 22px; font-weight: 800; text-align: center; font-variant-numeric: tabular-nums; }
+  li.medal .rank { color: var(--yellow); }
+  .name { font-size: 18px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .score { font-size: 16px; font-weight: 600; color: var(--paper); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .more { color: var(--mid); margin-top: 12px; font-size: 15px; }
+  .note { color: var(--mid); font-size: 13px; margin-top: 28px; border-top: 1px solid var(--line); padding-top: 14px; }
+  .err { background: var(--card); border-radius: 14px; padding: 16px; }
+</style>
+</head>
+<body>
+<main id="app"></main>
+<script>
+// 성적은 주소의 # 뒤에만 있다(서버로 가지 않음). 앱 core/lib/src/cup.dart CupSharePayload v1:
+// {v:1, t:대회 이름, d:날짜, e:종목, r:[[순위, 닉네임, 점수 표기]...], m:담지 못한 인원}
+(function () {
+  var ko = (navigator.language || 'ko').toLowerCase().indexOf('ko') === 0;
+  var L = ko
+    ? { kicker: '도장 대회 결과', more: function (n) { return '외 ' + n + '명'; }, err: '결과를 읽지 못했습니다. 링크가 잘렸을 수 있으니 받은 링크를 다시 열어 주세요.', note: '이 페이지는 받은 링크 안에 담긴 결과만 보여 줍니다. 결과는 어느 서버에도 저장되지 않습니다. 킥챌린저 앱으로 잰 기록입니다.' }
+    : { kicker: 'Dojang cup results', more: function (n) { return '+' + n + ' more'; }, err: 'Could not read the results. The link may be cut off — open the original link again.', note: 'This page only shows the results carried inside the link. Nothing is stored on any server. Measured with the Kick Challenger app.' };
+  if (!ko) document.documentElement.lang = 'en';
+  var app = document.getElementById('app');
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = String(text); return e; }
+  function decode(s) {
+    s = s.replace(/-/g, '+').replace(/_/g, '/');
+    while (s.length % 4) s += '=';
+    var bin = atob(s), bytes = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return JSON.parse(new TextDecoder('utf-8').decode(bytes));
+  }
+  var data = null;
+  function valid(d) {
+    if (!d || d.v !== 1 || typeof d.t !== 'string' || typeof d.d !== 'string' || typeof d.e !== 'string' || !Array.isArray(d.r)) return false;
+    return d.r.every(function (r) { return Array.isArray(r) && r.length === 3 && typeof r[0] === 'number' && typeof r[1] === 'string' && typeof r[2] === 'string'; });
+  }
+  try { data = decode(location.hash.slice(1)); if (!valid(data)) data = null; } catch (e) { data = null; }
+  if (!data) { app.appendChild(el('p', 'kicker', L.kicker)); app.appendChild(el('p', 'err', L.err)); return; }
+  document.title = data.t + ' · ' + L.kicker;
+  app.appendChild(el('p', 'kicker', L.kicker));
+  app.appendChild(el('h1', null, data.t));
+  app.appendChild(el('p', 'meta', data.e + ' · ' + data.d));
+  var ol = el('ol');
+  data.r.forEach(function (row) {
+    var li = el('li', row[0] <= 3 ? 'medal' : null);
+    li.appendChild(el('span', 'rank', row[0]));
+    li.appendChild(el('span', 'name', row[1]));
+    li.appendChild(el('span', 'score', row[2]));
+    ol.appendChild(li);
+  });
+  app.appendChild(ol);
+  if (data.m > 0) app.appendChild(el('p', 'more', L.more(data.m)));
+  app.appendChild(el('p', 'note', L.note));
+})();
+</script>
+</body>
+</html>

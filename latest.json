@@ -1,8 +1,8 @@
 {
-  "versionCode": 15,
-  "versionName": "0.12.0",
-  "apkUrl": "https://parkgolface-dev.github.io/kick-challenger-releases/kick-challenger-0.12.0.apk",
-  "sha256": "f305a9820c6e3ea6fc44c99e8904b902525823e2a4f578fcf475a11c6cafe838",
-  "notes": "앱이 꺼져 있어도 업데이트 소식이 나오면 휴대폰 알림, 센서 시험(개발판, 발등 센서 1~2개·시뮬레이션), 업데이트 소식 새 표시 버그 수정",
-  "publishedAt": "2026-11-13T15:53:38+09:00"
+  "versionCode": 16,
+  "versionName": "0.13.0",
+  "apkUrl": "https://parkgolface-dev.github.io/kick-challenger-releases/kick-challenger-0.13.0.apk",
+  "sha256": "add62784419072613224c9c1dba72e1e1d8c6b02c99199f7f8f943aaf2af5cc9",
+  "notes": "측정 전 자리 잡기 안내(발 잘림·한 걸음 뒤로/앞으로·옆으로 서기·밝은 곳), 자리를 옮기면 기준선을 다시 잡고 측정 중엔 「출발 자리로」 안내, 도장 대회: 사범이 명단을 만들어 기기 1대로 차례 측정·순위·마감·상위 3명 영상 확인·확정, 도장 대회 성적 공유: 전체 공유·카카오톡으로 바로·QR(결과 페이지)",
+  "publishedAt": "2026-11-16T19:45:43+09:00"
 }
