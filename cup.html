@@ -22,6 +22,7 @@
   li.medal .rank { color: var(--yellow); }
   .name { font-size: 18px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .score { font-size: 16px; font-weight: 600; color: var(--paper); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .comment { background: var(--card); border-left: 3px solid var(--yellow); border-radius: 8px; padding: 10px 14px; margin: 0 0 16px; }
   .more { color: var(--mid); margin-top: 12px; font-size: 15px; }
   .note { color: var(--mid); font-size: 13px; margin-top: 28px; border-top: 1px solid var(--line); padding-top: 14px; }
   .err { background: var(--card); border-radius: 14px; padding: 16px; }
@@ -35,8 +36,8 @@
 (function () {
   var ko = (navigator.language || 'ko').toLowerCase().indexOf('ko') === 0;
   var L = ko
-    ? { kicker: '도장 대회 결과', more: function (n) { return '외 ' + n + '명'; }, err: '결과를 읽지 못했습니다. 링크가 잘렸을 수 있으니 받은 링크를 다시 열어 주세요.', note: '이 페이지는 받은 링크 안에 담긴 결과만 보여 줍니다. 결과는 어느 서버에도 저장되지 않습니다. 킥챌린저 앱으로 잰 기록입니다.' }
-    : { kicker: 'Dojang cup results', more: function (n) { return '+' + n + ' more'; }, err: 'Could not read the results. The link may be cut off — open the original link again.', note: 'This page only shows the results carried inside the link. Nothing is stored on any server. Measured with the Kick Challenger app.' };
+    ? { coach: '사범 한마디', kicker: '도장 대회 결과', more: function (n) { return '외 ' + n + '명'; }, err: '결과를 읽지 못했습니다. 링크가 잘렸을 수 있으니 받은 링크를 다시 열어 주세요.', note: '이 페이지는 받은 링크 안에 담긴 결과만 보여 줍니다. 결과는 어느 서버에도 저장되지 않습니다. 킥챌린저 앱으로 잰 기록입니다.' }
+    : { coach: "Coach's note", kicker: 'Dojang cup results', more: function (n) { return '+' + n + ' more'; }, err: 'Could not read the results. The link may be cut off — open the original link again.', note: 'This page only shows the results carried inside the link. Nothing is stored on any server. Measured with the Kick Challenger app.' };
   if (!ko) document.documentElement.lang = 'en';
   var app = document.getElementById('app');
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = String(text); return e; }
@@ -58,6 +59,7 @@
   app.appendChild(el('p', 'kicker', L.kicker));
   app.appendChild(el('h1', null, data.t));
   app.appendChild(el('p', 'meta', data.e + ' · ' + data.d));
+  if (typeof data.c === 'string' && data.c) app.appendChild(el('p', 'comment', L.coach + ' — ' + data.c));
   var ol = el('ol');
   data.r.forEach(function (row) {
     var li = el('li', row[0] <= 3 ? 'medal' : null);
