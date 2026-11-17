@@ -1,0 +1,6 @@
+{
+  "schema": "kick.challenge-rules/0.1",
+  "updated": "2026-11-17",
+  "note": "도전(챌린지) 발차기 인정 높이 — 관리자 설정. adj = 모드 기본(키의 55%, 연타 35%)에서 가감하는 키의 %p. cm 아동 남 · cf 아동 여 · am 성인 남 · af 성인 여. 바꾸면 patch.sh/release.sh 또는 publish_rules.sh로 공개 페이지에 올린다.",
+  "adj": { "cm": 0, "cf": 0, "am": 0, "af": 0 }
+}
