@@ -1,8 +1,8 @@
 {
-  "versionCode": 17,
-  "versionName": "0.14.0",
-  "apkUrl": "https://parkgolface-dev.github.io/kick-challenger-releases/kick-challenger-0.14.0.apk",
-  "sha256": "665b372cbd93e1a87c145bd8b5d73dbdf0ab976334e88a511b37c8299f5dc008",
-  "notes": "카메라 프레임을 이 폰이 낼 수 있는 최상치로(어두운 실내에서 프레임이 떨어지는 것도 막음),프레임이 낮으면 측정 화면에 경고하고 영상 저장을 바로 끌 수 있음,결과 화면에 낮은 프레임으로 잰 측정이면 알림",
-  "publishedAt": "2026-11-17T15:08:18+09:00"
+  "versionCode": 18,
+  "versionName": "0.15.0",
+  "apkUrl": "https://parkgolface-dev.github.io/kick-challenger-releases/kick-challenger-0.15.0.apk",
+  "sha256": "a0c544bcc6e6a47c86afd3332f24f85dbc85528b9c88c8645aed626a79f9e3b1",
+  "notes": "셀카(전면 카메라) 실시간에서 영상과 골격이 반대로 움직이던 것을 기기에 맞춰 자동으로 맞춤,그래도 반대면 측정 화면의 「좌우 맞추기」(기억함)",
+  "publishedAt": "2026-11-17T17:45:53+09:00"
 }
