@@ -1,5 +1,13 @@
 [
  {
+  "versionCode": 1904,
+  "versionName": "0.16.0 · 패치 4",
+  "date": "2026-11-18",
+  "notes": [
+   "도전 화면 맨 위에 게임(과일 차기) 칸"
+  ]
+ },
+ {
   "versionCode": 1903,
   "versionName": "0.16.0 · 패치 3",
   "date": "2026-11-18",
