@@ -1,8 +1,8 @@
 {
-  "versionCode": 18,
-  "versionName": "0.15.0",
-  "apkUrl": "https://parkgolface-dev.github.io/kick-challenger-releases/kick-challenger-0.15.0.apk",
-  "sha256": "a0c544bcc6e6a47c86afd3332f24f85dbc85528b9c88c8645aed626a79f9e3b1",
-  "notes": "셀카(전면 카메라) 실시간에서 영상과 골격이 반대로 움직이던 것을 기기에 맞춰 자동으로 맞춤,그래도 반대면 측정 화면의 「좌우 맞추기」(기억함)",
-  "publishedAt": "2026-11-17T17:45:53+09:00"
+  "versionCode": 19,
+  "versionName": "0.16.0",
+  "apkUrl": "https://parkgolface-dev.github.io/kick-challenger-releases/kick-challenger-0.16.0.apk",
+  "sha256": "e1ac35529a24dc7eb722c6f1bc568ad05369e71f3a7bbf5ff5c9b55420398781",
+  "notes": "셀카 화면이 골격과 좌우가 늘 맞게(분석 그림을 그대로 화면에)",
+  "publishedAt": "2026-11-18T15:08:56+09:00"
 }
